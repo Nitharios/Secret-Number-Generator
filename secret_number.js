@@ -1,12 +1,9 @@
 'use strict';
 
 module.exports = function() {
-  var hiddenNum;
+  var hiddenNum = Math.random() * 1000001;
 
-  return function secretNumber() {
-    if (hiddenNum === undefined) {
-      hiddenNum = Math.random() * 1000000;
-    }
+  return function () {
     return hiddenNum;
   };
 };
